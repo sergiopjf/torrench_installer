@@ -41,7 +41,7 @@ Name: "{commondesktop}\Torrench"; Filename: "{app}\run_torrench.bat"; WorkingDir
 
 [Run]
 Filename: "{tmp}\copy_config.bat"; Flags: runhidden hidewizard waituntilterminated
-Filename: "{app}\torrench.exe"; Description: "{cm:LaunchProgram,Torrench}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\run_torrench.bat"; Description: "{cm:LaunchProgram,Torrench}"; Flags: nowait postinstall skipifsilent
 
 [UninstallDelete]
 Type: files; Name: "{app}\*.*"
@@ -100,5 +100,3 @@ begin
         FileCopy(ExpandConstant('{tmp}\torrench-' + String(Version2) + '.exe'), ExpandConstant('{app}\torrench.exe'), false);
      end;
 end;
-
-
